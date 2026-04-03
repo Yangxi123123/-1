@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>学生优势画像</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="spotlight-page">
+  <div class="app-shell">
+    <header class="topbar spotlight-topbar">
+      <div>
+        <p class="eyebrow">Student Strength Showcase</p>
+        <h2>学生优势画像页</h2>
+      </div>
+      <div class="topbar-actions"><a class="ghost-link" href="./index.html">返回主控台</a></div>
+    </header>
+    <section class="spotlight-grid">
+      <aside class="panel student-list-panel">
+        <div class="panel-heading"><div><p class="eyebrow">Students</p><h3>学生列表</h3></div></div>
+        <label class="search-box">
+          <span>搜索学生</span>
+          <input id="spotlightSearch" type="text" placeholder="输入学生姓名或学号" />
+        </label>
+        <div id="spotlightStudentList" class="student-list"></div>
+      </aside>
+      <section class="panel spotlight-detail-panel">
+        <div id="spotlightEmpty" class="spotlight-empty">请选择左侧学生，查看奖项、实习经历、就业意向与综合优势画像。</div>
+        <div id="spotlightContent" class="hidden">
+          <div class="spotlight-hero">
+            <div class="spotlight-hero-copy"><p class="eyebrow">Personal Portrait</p><h3 id="spotlightName">-</h3><p id="spotlightMajor" class="muted"></p></div>
+            <div class="score-badge"><span>优势评分</span><strong id="spotlightScore">0</strong></div>
+          </div>
+          <div class="spotlight-banner">
+            <div>
+              <strong>优势画像概览</strong>
+              <p class="muted">聚合学生奖项、实习、技能、项目与贡献，便于快速向企业展示个人竞争力。</p>
+            </div>
+          </div>
+          <div class="spotlight-metrics">
+            <article class="analysis-item"><p class="eyebrow">奖项亮点</p><strong id="spotlightAwardsCount">0 项</strong><p id="spotlightAwards" class="muted">暂无</p></article>
+            <article class="analysis-item"><p class="eyebrow">实习亮点</p><strong id="spotlightInternshipTag">待补充</strong><p id="spotlightInternship" class="muted">暂无</p></article>
+            <article class="analysis-item"><p class="eyebrow">就业意向</p><strong id="spotlightIntentTitle">待确认</strong><p id="spotlightIntent" class="muted">暂无</p></article>
+          </div>
+          <div class="spotlight-metrics">
+            <article class="analysis-item"><p class="eyebrow">掌握技能</p><strong id="spotlightSkillsTitle">待补充</strong><p id="spotlightSkills" class="muted">暂无</p></article>
+            <article class="analysis-item"><p class="eyebrow">项目经历</p><strong id="spotlightProjectsTitle">待补充</strong><p id="spotlightProjects" class="muted">暂无</p></article>
+            <article class="analysis-item"><p class="eyebrow">个人贡献</p><strong id="spotlightContributionTitle">待补充</strong><p id="spotlightContribution" class="muted">暂无</p></article>
+          </div>
+          <div class="strength-grid">
+            <article class="panel inner-panel"><p class="eyebrow">Strength Summary</p><h3>综合优势摘要</h3><p id="spotlightSummary" class="muted"></p></article>
+            <article class="panel inner-panel"><p class="eyebrow">Recommended Positions</p><h3>推荐岗位方向</h3><div id="spotlightRecommendations" class="recommendation-list"></div></article>
+          </div>
+        </div>
+      </section>
+    </section>
+  </div>
+  <script src="./student-spotlight.js"></script>
+</body>
+</html>
